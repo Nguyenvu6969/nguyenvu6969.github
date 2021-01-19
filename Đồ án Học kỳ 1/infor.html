@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylewatch.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    
+  <header>
+
+    <nav  class="navbar navbar-expand-lg navbar-dark" style="background-color: #181818;border-bottom: 2px solid yellow;">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a style="background: black; border-radius: 5px;border: 5px solid black;" class="navbar-brand" href="#">PHIM<span style="color: black;font-weight: bold; background-color: yellow;border-radius: 5px;">HAY</span></a>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Phim mới <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Thể loại</a>
+                        <div class="dropdown-menu" id="ctgr">
+                          <p class="dropdown-item" >Phim hành động</p>
+                          <p class="dropdown-item" >Phim hài hước</p>
+                          <p class="dropdown-item" >Phim cổ trang</p>
+                          <p class="dropdown-item" >Phim chính kịch-Drama</p>
+                          <p class="dropdown-item" >Phim viễn tưởng</p>
+                          <p class="dropdown-item" >Phim võ thuật</p>
+                          <p class="dropdown-item" >Phim thần thoại</p>
+                          <p class="dropdown-item" >Phim tâm lý</p>
+                          <p class="dropdown-item" >Phim kinh dị</p>
+                        </div>
+                      </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Quốc gia</a>
+                        <div class="dropdown-menu" id="country">
+                          <p class="dropdown-item" >Mỹ</p>
+                          <p class="dropdown-item" >Nhật Bản</p>
+                          <p class="dropdown-item" >Canada</p>
+                          <p class="dropdown-item" >Pháp</p>
+                          <p class="dropdown-item" >Hồng Kông</p>
+                          <p class="dropdown-item" >Trung Quốc</p>
+                          <p class="dropdown-item" >Hàn Quốc</p>
+                          <p class="dropdown-item" >Thái Lan</p>
+                          <p class="dropdown-item" >Quốc gia khác</p>
+                        </div>
+                      </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Phim bộ</a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item"  href="#">Phim bộ Hàn Quốc</a>
+                          <a class="dropdown-item"  href="#">Phim bộ Việt Nam</a>
+                          <a class="dropdown-item"  href="#">Phim bộ Nhật Bản</a>
+                          <a class="dropdown-item"  href="#">Phim bộ Hồng Kông</a>
+                          <a class="dropdown-item"  href="#">Phim bộ Đài Loan</a>
+                          <a class="dropdown-item"  href="#">Phim bộ Trung Quốc</a>
+                        </div>
+                      </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0" autocomplete="off">
+                    <input class="form-control mr-sm-2" id="searchFilm" onkeyup="search()" type="te" placeholder="Search" aria-label="Search">
+                    <div class="valsearch"> 
+                    </div>
+                    <button class="btn btn-outline-warning">Tìm kiếm</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+</header>
+    <section >
+
+        <div class="container py-5">
+            <div class="row" style="min-height: 500px;">
+                <div class="col-8" style="min-height: 500px;">
+                    
+                    <div class="row form-film py-2">
+                        
+                        <div class="col-6">
+                            <div class="img-film"></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="title-film">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 other-film">
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p class="h4">NỘI DUNG PHIM</p>
+                    <hr/>
+                    <p class="content"></p>
+                </div>
+            </div>
+        </div>
+        <div class="trailer-film">
+            <div class="container">
+                <div id="watch-trailer" class="col-12"></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="container">
+                <p class="h4">CÓ THỂ BẠN CŨNG MUỐN XEM</p>
+                <div class="row film-box">
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-white text-lg-start">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">PHIMHAY.NET</h5>
+    
+            <p>
+              Tổng hợp phim lẻ, phim bộ mới năm 2019, 2020, 2021.
+            </p>
+          </div>
+          <!--Grid column-->
+    
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Phim mới</h5>
+    
+            <ul id="normal" class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Phim lẻ mới</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Phim chiếu rạp</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Phim bộ mới</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Phim sắp chiếu</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+    
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-0">Follow Us</h5>
+    
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!" id="fb" class="text-white"><i class="fab fa-facebook-square"></i></a>
+              </li>
+              <li>
+                <a href="#!" id="gm" class="text-white"><i class="fas fa-envelope"></i></a>
+              </li>
+              
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        
+        <a class="text-dark" href="https://mdbootstrap.com/">phimhay.net</a>
+      </div>
+      <!-- Copyright -->
+    </footer>  
+
+  <!-- Footer -->
+
+    <script src="jquery-3.2.1.slim.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="infor.js"></script>
+</body>
+
+</html>
